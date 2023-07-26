@@ -80,3 +80,37 @@ class City {
  
 };
 ```
+
+## Constructors in C++
+
+A **constructor** is a method that lets you decide how the objects of a class get created, having the same name as the class and no return type.
+
+An example of a constructor being used can be found in the `Example` folder.
+
+## Destructors in C++
+
+Object destruction is about **tidying up and preventing memory leaks**. A *destructor* is a special method that handles object destruction, and has no return type.
+
+A destructor is denoted with `~`, as shown below:
+
+```cpp
+//contents of a .h file relating to a .cpp file
+public:
+
+City(std::string city_name, int population); //constructor 
+~City(); //destructor
+
+//destructor defined in the related .cpp file
+City::~City() {
+  //destruction code
+}
+```
+
+After the destructor is run, the object will be destroyed: **this is done automatically in the following scenarios**:
+
+1. The object moves out of scope
+2. The object is explicitly deleted
+3. The program ends
+
+A full implementation of a destructor can be found in the `Example` folder.
+
